@@ -1525,6 +1525,9 @@ header .navbar.sticky-header{
 	.header .navbar-nav{
 		display: none;
 	}
+	.banner{
+		background: none;
+	}
 	
 	.header .navbar{
 		align-items: flex-start;
@@ -1702,7 +1705,9 @@ header .navbar.sticky-header{
 		padding-left: 15px !important;
 		padding-right: 15px !important;
 	}
-	
+	.navbar-brand h1{
+		font-size: 150%;
+	}
 	.portfolio-nav ul li a{
 		padding: 4px 6px;
 		margin: 0 2px;
