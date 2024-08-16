@@ -680,18 +680,25 @@
 					<!-- Contact Form end -->
 
 					<!-- script  for form and email validation -->
-					<script>
+										<script>
 						function validate() {
-							let name = document.getElementById("name").value
-							let email = document.getElementById("email").value
-							let subject = document.getElementById("subject").value
-							let text = document.getElementById("text").value
+							let name = document.getElementById("name").value.trim()
+							let email = document.getElementById("email").value.trim()
+							let subject = document.getElementById("subject").value.trim()
+							let text = document.getElementById("text").value.trim()
 
 							let reg = /^([A-Za-z0-9._]+)@([a-zA-Z0-9])+\.([a-z]+)(.[a-z]+)?$/
 							let result = reg.test(email)
 
+							let reg1=/^[A-Za-z ]+$/
+							let result1=reg1.test(name)
+
 							if (name == "") {
 								alert("Please enter your name")
+								return false
+							}
+							if (result1 == false) {
+								alert("Sorry Invalid name")
 								return false
 							}
 							if (email == "") {
@@ -704,6 +711,7 @@
 							}
 							if (subject == "") {
 								alert("Please enter subject")
+
 								return false
 							}
 							if (text == "") {
